@@ -155,7 +155,34 @@ body {
   }
 }
 
+.loader.loader--under-button {
+  position: static;
+  margin: 20px auto;
+  display: block;
+  transform: none;
+}
+
 .sl-caption {
   text-align: left !important;
   padding-left: 15px;
+}
+
+.load-more {
+  border-radius: 8px;
+  padding: 8px 16px;
+  margin-top: 16px;
+  width: 125px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background: #4e75ff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.load-more:hover {
+  background: #6c8cff;
 }

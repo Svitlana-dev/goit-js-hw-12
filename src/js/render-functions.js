@@ -16,16 +16,21 @@ let lightbox = new SimpleLightbox(".gallery a", {
   captionDelay: 250,
 });
 
-export function showLoader() {
-  if (loader) {
-    loader.style.display = "inline-block";
+export function showLoader(underButton = false) {
+  if (!loader) return;
+
+  if (underButton) {
+    loader.classList.add("loader--under-button");
+  } else {
+    loader.classList.remove("loader--under-button");
   }
+
+  loader.style.display = "block";
 }
 
 export function hideLoader() {
-  if (loader) {
-    loader.style.display = "none";
-  }
+  if (!loader) return;
+  loader.style.display = "none";
 }
 
 export function clearGallery() {
